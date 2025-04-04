@@ -115,3 +115,30 @@ ul.ingredients-list > li {
 .suggested-recipe-container ul li, .suggested-recipe-container ol li {
     margin-bottom: 8px;
 }
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #3498db;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-text {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
