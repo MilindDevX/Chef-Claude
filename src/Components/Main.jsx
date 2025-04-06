@@ -1,7 +1,7 @@
 import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientList from "./IngredientList";
-import { getRecipeFromMistral } from "../ai"
+import { getRecipeFromChefClaude } from "../ai"
 import Loading from "./Loading";
 
 export default function Main() {
@@ -16,7 +16,7 @@ export default function Main() {
   async function getRecipe() {
     setLoading(true);       
     setRecipe("");          
-    const recipeMarkDown = await getRecipeFromMistral(ingredients);
+    const recipeMarkDown = await getRecipeFromChefClaude(ingredients);
     setRecipe(recipeMarkDown);
     setLoading(false);
   }
